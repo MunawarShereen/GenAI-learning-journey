@@ -8,6 +8,7 @@ dcoument = [
     "Lahore is the cultural hub of Pakistan",
     "Peshawar is the capital of Khyber Pakhtunkhwa",
     "Quetta is the capital of Balochistan",
+    "You can write whatever you want"
 ]
 
 vector = embeddings.embed_documents(dcoument)
