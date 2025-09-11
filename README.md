@@ -36,3 +36,57 @@ Optionally, create or choose a model on Hugging Face.
 Finally, run the Python script of your choice:
 py fileName.py
 Replace fileName.py with the actual script you want to execute.
+
+
+🧠 LangChain Models – Notes
+
+LangChain provides a powerful framework for working with models in AI applications.
+Broadly, there are two main categories of models in LangChain:
+
+1️⃣ Language Models (LMs)
+
+Language models are designed to process and generate natural language.
+They are further divided into two categories:
+
+🔹 a) LLMs (Large Language Models – Legacy)
+
+LLMs were the first generation of language models used in LangChain.
+They are designed for general-purpose text generation, such as:
+✅ Generating text
+✅ Summarizing documents
+✅ Answering questions
+✅ Writing and explaining code
+
+🔹 b) Chat Models (Modern)
+
+Chat models are the preferred way to work with language models today.
+Unlike traditional LLMs, ChatModels are designed for multi-turn conversations.
+They:
+✅ Accept structured input (e.g., system, user, and assistant messages)
+✅ Maintain conversational context
+✅ Support multi-turn interactions
+
+📌 Closed-Source vs Open-Source Language Models
+Language models can be closed-source or open-source:
+| **Type**          | **Examples**                                      | **Notes**                                      |
+| ----------------- | ------------------------------------------------- | ---------------------------------------------- |
+| **Closed Source** | OpenAI (GPT), Claude (Anthropic), Gemini (Google) | Hosted via API, easy to use, highly capable    |
+| **Open Source**   | Hugging Face models, LLaMA, Mistral               | Self-hostable, customizable, great for privacy |
+
+2️⃣ Embedding Models
+
+Embedding models convert text into numerical vectors that capture meaning.
+These embeddings can be used for:
+✅ Semantic Search (finding similar documents)
+✅ Clustering & Classification
+✅ Recommendation Systems
+✅ Retrieval-Augmented Generation (RAG)
+
+
+✅ Key Takeaways
+Language Models → Generate and process text
+🔹 LLMs → Old approach, general-purpose text generation
+🔹 ChatModels → Modern approach, conversational & context-aware
+Embedding Models → Convert text into vectors for semantic search and retrieval
+Both categories have open-source and closed-source options.
+
