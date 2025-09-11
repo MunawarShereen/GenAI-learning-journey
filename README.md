@@ -52,9 +52,13 @@ They are further divided into two categories:
 
 LLMs were the first generation of language models used in LangChain.
 They are designed for general-purpose text generation, such as:
+
 ✅ Generating text
+
 ✅ Summarizing documents
+
 ✅ Answering questions
+
 ✅ Writing and explaining code
 
 🔹 b) Chat Models (Modern)
@@ -62,8 +66,11 @@ They are designed for general-purpose text generation, such as:
 Chat models are the preferred way to work with language models today.
 Unlike traditional LLMs, ChatModels are designed for multi-turn conversations.
 They:
+
 ✅ Accept structured input (e.g., system, user, and assistant messages)
+
 ✅ Maintain conversational context
+
 ✅ Support multi-turn interactions
 
 📌 Closed-Source vs Open-Source Language Models
@@ -77,9 +84,13 @@ Language models can be closed-source or open-source:
 
 Embedding models convert text into numerical vectors that capture meaning.
 These embeddings can be used for:
+
 ✅ Semantic Search (finding similar documents)
+
 ✅ Clustering & Classification
+
 ✅ Recommendation Systems
+
 ✅ Retrieval-Augmented Generation (RAG)
 
 
