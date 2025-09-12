@@ -104,3 +104,6 @@ Both categories have open-source and closed-source options.
 Langchain Prompts:
 the content yet to be add
 
+Langchain Structured Output:
+the contect yet to be add
+
