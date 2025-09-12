@@ -101,3 +101,6 @@ Language Models → Generate and process text
 Embedding Models → Convert text into vectors for semantic search and retrieval
 Both categories have open-source and closed-source options.
 
+Langchain Prompts:
+the content yet to be add
+
