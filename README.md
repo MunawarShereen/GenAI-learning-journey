@@ -137,6 +137,14 @@ Help the model generalize better by learning from patterns.
 
 🔹 d) Chat Prompts
 
+3️⃣ Why are Prompts Important?
+
+Prompts help you:
+✅ Control tone, style, and depth of answers
+✅ Improve accuracy of model responses
+✅ Provide additional context or constraints
+✅ Break down complex tasks into smaller, structured steps
+
 Designed for chat-based models.
 
 Use roles such as system, user, and assistant.
