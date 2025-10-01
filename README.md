@@ -194,4 +194,32 @@ Step 3: Generate a combined report for the user
 
 ✅ Best for workflows where each task depends on the previous one.
 
+2️⃣ Parallel Chain
+
+Multiple tasks run simultaneously on the same input.
+
+Outputs are then merged or combined.
+
+Example 1: Notes + Quiz Generator
+
+User provides a detailed text
+
+Chain A → Generates study notes
+
+Chain B → Generates a quiz
+
+Final output merges notes + quiz into a single package
+
+Example 2: Multi-Style Writing
+
+Input: Blog topic → Run in parallel
+
+Chain A → Generates a formal version
+
+Chain B → Generates a casual version
+
+Chain C → Generates a social media caption
+
+✅ Best for generating multiple perspectives or outputs from one input.
+
 
