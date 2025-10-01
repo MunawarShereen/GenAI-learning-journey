@@ -149,3 +149,15 @@ Designed for chat-based models.
 
 Use roles such as system, user, and assistant.
 
+4️⃣ Best Practices for Prompting
+
+Be specific and clear – vague prompts lead to vague results.
+
+Use examples for better guidance.
+
+Leverage system messages in chat prompts to set rules.
+
+Chain prompts together for complex workflows.
+
+Iteratively refine prompts to optimize results.
+
