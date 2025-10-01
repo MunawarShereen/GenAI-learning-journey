@@ -101,9 +101,17 @@ Language Models → Generate and process text
 Embedding Models → Convert text into vectors for semantic search and retrieval
 Both categories have open-source and closed-source options.
 
-Langchain Prompts:
-the content yet to be add. 
+🧠 LangChain Prompts – Notes
 
-Langchain Structured Output:
-the contect yet to be add
+Prompts are the foundation of interaction with language models in LangChain. They define what input is sent to the model and strongly influence the quality of the response.
+
+1️⃣ What are Prompts?
+
+Prompts are structured instructions that guide a language model to produce useful and relevant outputs.
+
+They can include:
+✅ Direct instructions
+✅ Variables (dynamic content)
+✅ Examples (few-shot learning)
+✅ Conversation context (for chat models)
 
