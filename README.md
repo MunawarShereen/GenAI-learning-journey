@@ -172,5 +172,26 @@ Iteratively refine prompts to optimize results.
 
 Chains in LangChain allow you to build pipelines where the output of one step becomes the input of the next. This enables the creation of complex workflows that go beyond a single prompt–response interaction.
 
+1️⃣ Sequential Chain
+
+Tasks are executed step by step.
+
+The output of one step becomes the input for the next.
+
+Example 1: Topic Summarization
+
+User provides a topic → LLM generates a detailed explanation
+
+That explanation is sent to another LLM → Extract 5 key points
+
+Example 2: Research Workflow
+
+Step 1: Search API collects documents
+
+Step 2: Summarize each document
+
+Step 3: Generate a combined report for the user
+
+✅ Best for workflows where each task depends on the previous one.
 
 
