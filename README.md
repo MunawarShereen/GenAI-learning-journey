@@ -218,6 +218,28 @@ Chain A → Generates a formal version
 
 Chain B → Generates a casual version
 
+3️⃣ Conditional Chain
+
+Uses branching logic to choose different paths based on conditions.
+
+Helpful when output depends on feedback, data, or rules.
+
+📌 Example 1: Feedback Handling
+
+If feedback is positive → Respond with “Thank you! Please rate us ⭐”
+
+If feedback is negative → Generate a custom apology and troubleshooting message
+
+📌 Example 2: Customer Support Bot
+
+If query is about billing → Route to billing chain
+
+If query is about technical issues → Route to tech-support chain
+
+If query is general → Route to FAQ chain
+
+✅ Best for decision trees, routing, and adaptive workflows.
+
 Chain C → Generates a social media caption
 
 ✅ Best for generating multiple perspectives or outputs from one input.
