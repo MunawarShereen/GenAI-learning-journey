@@ -2,7 +2,7 @@ LangChain Models folder
 # GenAI-learning-journey
 A repository documenting my daily learning journey with Generative AI and LangChain, featuring notes, examples, and hands-on experiments.
 
-## 🚀 Setup Instructions
+Setup Instructions
 
 Follow the steps below to set up this project on your local machine:
 
@@ -101,6 +101,9 @@ Language Models → Generate and process text
 Embedding Models → Convert text into vectors for semantic search and retrieval
 Both categories have open-source and closed-source options.
 
+
+
+
 🧠 LangChain Prompts – Notes
 
 Prompts are the foundation of interaction with language models in LangChain. They define what input is sent to the model and strongly influence the quality of the response.
@@ -160,4 +163,14 @@ Leverage system messages in chat prompts to set rules.
 Chain prompts together for complex workflows.
 
 Iteratively refine prompts to optimize results.
+
+
+
+
+
+🧠 LangChain Chains – Notes
+
+Chains in LangChain allow you to build pipelines where the output of one step becomes the input of the next. This enables the creation of complex workflows that go beyond a single prompt–response interaction.
+
+
 
