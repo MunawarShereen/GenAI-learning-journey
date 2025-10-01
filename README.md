@@ -115,3 +115,29 @@ They can include:
 ✅ Examples (few-shot learning)
 ✅ Conversation context (for chat models)
 
+2️⃣ Types of Prompts in LangChain
+
+🔹 a) String Prompts
+
+Simple text inputs.
+
+Directly send raw text to the model.
+
+🔹 b) Prompt Templates
+
+Prompts with placeholders for variables.
+
+Allow dynamic and reusable input structures.
+
+🔹 c) Few-Shot Prompts
+
+Include examples of inputs and outputs.
+
+Help the model generalize better by learning from patterns.
+
+🔹 d) Chat Prompts
+
+Designed for chat-based models.
+
+Use roles such as system, user, and assistant.
+
