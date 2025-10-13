@@ -414,3 +414,119 @@ Each Output Parser follows a common idea:
 - **Validation (optional)** → Ensure the output matches the expected schema.
 
 ---
+
+## 🧱 Types of Output Parsers
+
+LangChain provides several types of Output Parsers depending on the desired level of structure and validation.
+
+---
+
+### 1️⃣ String Output Parser (`StrOutputParser`)
+
+**What it does:**  
+Takes the LLM’s response and returns it **as a simple string** — without any additional formatting.
+
+**When to use:**  
+- When you just need plain text from an LLM.  
+- Commonly used inside basic chains or pipelines.  
+
+**Example Use Case:**  
+Summarization, creative writing, or Q&A tasks where structure isn’t required.
+
+**Pros:**  
+- Simple and lightweight  
+- No schema or validation needed  
+
+**Cons:**  
+- Cannot enforce structure or consistency in the output  
+
+---
+
+### 2️⃣ JSON Output Parser (`JsonOutputParser`)
+
+**What it does:**  
+Instructs the LLM to produce output **strictly in JSON format**.
+
+**When to use:**  
+- When you need structured JSON responses directly from the model.
+
+**Example Use Case:**  
+Extracting key-value pairs, structured responses, or API-ready data.
+
+**Pros:**  
+- Forces LLM to output valid JSON  
+- Easy to integrate with other tools and data systems  
+
+**Cons:**  
+- Does **not validate** schema or template  
+- If the LLM makes a small formatting mistake, parsing may fail  
+
+---
+
+### 3️⃣ Structured Output Parser (`StructuredOutputParser`)
+
+**What it does:**  
+Parses structured JSON data **based on predefined field schemas**.
+
+**When to use:**  
+- When you want to extract structured fields (like name, age, location) from LLM responses.  
+- Useful when you want predictable field names and structure.
+
+**Example Use Case:**  
+Extracting structured entities, form responses, or standardized data records.
+
+**Pros:**  
+- Enforces a predefined structure in the output  
+- Ensures field-level consistency  
+
+**Cons:**  
+- Does **not support data validation**  
+- Cannot enforce data types or custom constraints  
+
+---
+
+### 4️⃣ Pydantic Output Parser (`PydanticOutputParser`)
+
+**What it does:**  
+A structured output parser that uses **Pydantic models** to enforce **schema validation** on the parsed LLM responses.
+
+**When to use:**  
+- When you need both structure **and** validation.  
+- Ideal for production pipelines where data accuracy matters.
+
+**Example Use Case:**  
+Generating validated JSON data that conforms to a strict schema (like user profiles, transactions, or reports).
+
+**Pros:**  
+- Ensures output follows the exact schema  
+- Performs type and value validation automatically  
+- Great for integration in reliable, production-grade workflows  
+
+**Cons:**  
+- Slightly more complex setup than other parsers  
+
+---
+
+## 🔗 Key Takeaways
+
+| Concept | Description |
+|----------|-------------|
+| **Output Parsers** | Convert raw LLM text into structured formats |
+| **Purpose** | To make LLM outputs consistent, structured, and validated |
+| **Common Interface** | Parse methods and format instructions |
+| **String Parser** | Returns plain text responses |
+| **JSON Parser** | Forces LLM to output in JSON format |
+| **Structured Parser** | Extracts data into a predefined JSON structure |
+| **Pydantic Parser** | Uses schema validation for robust, error-free output |
+
+---
+
+## ✅ Summary
+
+Output Parsers bring **structure and reliability** to LLM workflows.  
+They make it possible to seamlessly convert unpredictable text responses into well-defined, machine-readable formats.
+
+By choosing the right parser — whether **string**, **JSON**, **structured**, or **Pydantic** —  
+you can ensure your GenAI pipelines are **consistent, validated, and ready for real-world applications**.
+
+Every Output Parser in LangChain is **reusable, composable, and essential** for building scalable, production-grade AI systems.
