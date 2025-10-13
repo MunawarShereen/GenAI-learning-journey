@@ -376,3 +376,41 @@ This allows for **dynamic decision-making** inside your pipeline.
 - They allow seamless **interoperability** between tools, models, and logic.  
 - You can connect Runnables sequentially or in parallel, apply conditions, or even wrap custom Python functions.  
 - Every Runnable is reusable, composable, and can be integrated into **scalable GenAI pipelines**.
+
+
+
+
+# 🧠 Output Parsers
+
+Output Parsers in LangChain help **convert raw LLM responses into structured, machine-readable formats**.  
+They ensure that the output from a Language Model is consistent, predictable, and ready to be used in applications or further processing.
+
+In simple terms:  
+> Output Parsers act as “format translators” that transform the often-messy text from an LLM into a clean and structured form (like JSON, strings, or Python objects).
+
+---
+
+## 💡 Why Output Parsers Exist
+
+Language models usually return plain text — which can be inconsistent, unstructured, and hard to use in production pipelines.  
+To make outputs usable and reliable, LangChain introduced **Output Parsers** as a standardized interface for parsing and validating responses.
+
+This ensures:
+- Consistency in LLM outputs  
+- Better control over structure and format  
+- Easier data extraction and integration with other systems  
+
+With Output Parsers, you can easily define how you want your LLM to respond — whether it’s plain text, JSON, or even a fully validated schema using Pydantic.
+
+---
+
+## 🧩 Core Concept of Output Parsers
+
+Output Parsers take **raw LLM text output** → apply a **parsing rule or schema** → return a **structured result**.
+
+Each Output Parser follows a common idea:
+- **Parse** → Convert LLM text into a specific format.  
+- **Format Instructions** → Tell the LLM how to structure its response before generation.  
+- **Validation (optional)** → Ensure the output matches the expected schema.
+
+---
