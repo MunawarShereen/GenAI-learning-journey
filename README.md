@@ -243,7 +243,7 @@ Chain C → Generates a social media caption
 
 ✅ Best for generating multiple perspectives or outputs from one input.
 
-# 🧩 LangChain Structured Output – Notes
+# 🧠 LangChain Structured Output – Notes
 
 Structured Output helps language models (LLMs) return well-organized data (like JSON) instead of plain text.  
 This makes it easier to connect LLMs with other systems, such as databases or APIs.
@@ -304,6 +304,39 @@ Agents generate structured outputs that specify which tool to use and what input
 ```
 
 The agent reads this structured output, sends it to the calculator tool, and returns the final result.
+
+## 4️⃣ Why Structured Output is Important
+
+Without structured data, it’s difficult to connect an LLM with other systems like databases, APIs, or external tools.
+Structured Output acts as a bridge that allows communication between the LLM and other software components.
+
+## 5️⃣ LLM Capabilities
+
+There are two types of LLMs in this context:
+
+Models that can generate structured outputs (for example, via JSON schemas).
+
+Models that cannot generate structured outputs and only return plain text.
+
+## 6️⃣ Working with Structured and Unstructured Outputs
+
+For structured output, we use:
+```python
+llm.with_structured_output()
+```
+For unstructured output, we use:
+```python
+output_parsers
+```
+## 7️⃣ Pydantic – Data Validation
+
+Pydantic
+Pydantic is a Python library used for data type validation.
+It ensures that the data returned by the LLM follows the correct types and structure which is very useful in APIs.
+
+## 8️⃣ Making a Schema
+
+Schemas define the structure of your output — what fields exist and what types of data they hold.
 
 
 # ⚙️ LangChain Runnables – Notes
