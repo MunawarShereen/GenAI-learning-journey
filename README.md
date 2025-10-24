@@ -338,6 +338,57 @@ It ensures that the data returned by the LLM follows the correct types and struc
 
 Schemas define the structure of your output — what fields exist and what types of data they hold.
 
+Here are three common ways to define schemas in LangChain:
+
+---
+
+### 🔹 1. TypedDict
+
+A simple Python type hint that defines expected dictionary keys and their value types.  
+Useful for lightweight and quick schema definitions.
+
+**Example:**
+
+```python
+from typing import TypedDict
+
+class ResumeSchema(TypedDict):
+    name: str
+    education: str
+    college: str
+    work_experience: str
+```
+
+---
+
+### 🔹 2. Pydantic
+
+A Python library for defining structured data with type validation and default values.
+Useful when you want data integrity and built-in validation.
+
+---
+
+### 🔹 3. JSON Schema
+
+A language-independent way to describe JSON data structures.
+Use this when working across multiple languages or when you don’t need Python objects.
+
+---
+
+## 9️⃣ When to Use Which Schema
+
+| Schema Type     | When to Use                                                           |
+| ---------------- | -------------------------------------------------------------------- |
+| **TypedDict**    | When you trust the LLM output and don’t need validation              |
+| **Pydantic**     | When you want validation, default values, and strict type checking   |
+| **JSON Schema**  | When working in multi-language environments or without Python objects |
+
+
+## ✅ In Summary
+
+Structured Output makes LLM responses predictable, validated, and machine-friendly.
+It enables smooth integration between LLMs, APIs, and databases — forming the foundation of reliable AI applications.
+
 
 # ⚙️ LangChain Runnables – Notes
 
