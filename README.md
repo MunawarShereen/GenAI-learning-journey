@@ -243,6 +243,68 @@ Chain C → Generates a social media caption
 
 ✅ Best for generating multiple perspectives or outputs from one input.
 
+# 🧩 LangChain Structured Output – Notes
+
+Structured Output helps language models (LLMs) return well-organized data (like JSON) instead of plain text.  
+This makes it easier to connect LLMs with other systems, such as databases or APIs.
+
+---
+
+## 1️⃣ What is Structured Output?
+
+Structured Output means that the response from an LLM follows a specific structure or format (for example, JSON).  
+Instead of generating free-form text, the LLM produces data that can be directly used in applications or tools.
+
+---
+
+## 2️⃣ Why do We Need Structured Output?
+
+Language models usually generate **unstructured text**, which is hard for systems to understand or process automatically.  
+Structured Output makes the data machine-readable, so it can be easily validated, stored, and used by other programs.
+
+---
+
+## 3️⃣ Common Use Cases
+
+### 🔹 Use Case 1 – Resume Parsing
+When a person uploads their resume (which contains their name, education, college, and work experience),  
+the LLM can extract this information and create a **JSON file** like this:
+
+```json
+{
+  "name": "John Doe",
+  "education": "B.Tech in Computer Science",
+  "college": "XYZ University",
+  "work_experience": "3 years at ABC Company"
+}
+```
+This structured format can then be used directly by HR systems, without any manual editing.
+
+### 🔹 Use Case 2 – Product Reviews (e.g., Amazon)
+Customer reviews are usually unstructured and vary in style.
+Structured Output helps us extract useful details like product name, pros, and cons.
+
+```json
+{
+  "product": "Mobile Phone",
+  "pros": ["Good battery life", "Fast performance"],
+  "cons": ["Camera quality could be better"]
+}
+```
+
+### 🔹 Use Case 3 – Agents and Tools
+LangChain Agents use different tools to perform tasks (for example, using a calculator for math).
+Agents generate structured outputs that specify which tool to use and what inputs to give.
+
+```json
+{
+  "action": "calculator",
+  "input": "25 * 4"
+}
+```
+
+The agent reads this structured output, sends it to the calculator tool, and returns the final result.
+
 
 # ⚙️ LangChain Runnables – Notes
 
