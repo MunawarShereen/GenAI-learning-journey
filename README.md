@@ -714,3 +714,116 @@ RAG systems typically include the following main components:
 4. **Retrievers**
 
 ---
+
+## 🧾 Document Loaders
+
+### 🔍 What Are Document Loaders?
+
+**Document Loaders** are tools that load your source data — such as text files, PDFs, websites, or CSVs — and convert them into a format that RAG systems can understand.
+
+A document generally contains:
+- **Page Content**: The main text or information.
+- **Metadata**: Details about where the text came from (e.g., file name, URL, author).
+
+### 📦 Types of Document Loaders (LangChain)
+
+All these loaders exist in the `langchain_community` module.
+
+#### 1️⃣ TextLoader
+Used to load plain text (`.txt`) files.
+
+#### 2️⃣ PyPDFLoader
+Used to load text-based PDFs and convert each page into a document.
+- Works well for **text PDFs**, but **not for scanned PDFs**.
+- For PDFs with tables or columns, use **PDFPlumberLoader**.
+- For PDFs with images or scanned data, use **UnstructuredPDFLoader** or **AmazonTextractPDFLoader**.
+
+#### 3️⃣ DirectoryLoader
+Loads multiple documents from a folder all at once, making it easy to process large collections of files.
+
+📘 You can read more here:  
+[LangChain Document Loaders](https://python.langchain.com/docs/concepts/document_loaders/)
+
+---
+
+## 🧩 Why Not Just Fine-Tune?
+
+**Fine-tuning** means retraining a model with new data, but it has several challenges:
+
+| Issue | Description |
+|:------|:-------------|
+| 💰 Expensive | Requires a lot of computing power and data |
+| 🧠 Complex | Needs strong machine learning expertise |
+| 🔄 Static | Must be redone when new data arrives |
+
+### 🎓 Analogy
+
+| Concept | Example |
+|:---------|:---------|
+| **Pretraining** | A student learning general knowledge in university |
+| **Fine-tuning** | The student getting company-specific training |
+| **RAG** | The student looking up reference books when needed |
+
+RAG allows the model to “look up” new information without needing retraining.
+
+---
+
+## 🧠 In-Context Learning vs RAG
+
+### 🧩 In-Context Learning (ICL)
+The model learns to answer questions based on **examples given within the same prompt**.
+
+### ⚙️ RAG
+RAG goes beyond that — it retrieves **additional relevant information** from external sources before answering the question.  
+This ensures the output is **factual and up-to-date**.
+
+---
+
+## ⚙️ How RAG Works
+
+RAG typically involves **four main stages**:
+
+---
+
+### 🏗️ Step 1: Indexing  
+*(Creating an external knowledge base)*
+
+1. **Document Ingestion** – Load your data from various formats (like PDFs, text files, or websites).  
+2. **Text Chunking** – Split large documents into smaller, meaningful chunks for efficient processing.  
+3. **Embedding Generation** – Convert each chunk into a numeric representation (called an embedding) that captures its meaning.  
+4. **Vector Storage** – Store these embeddings in a **Vector Database** (like FAISS, Pinecone, or Chroma) along with their metadata.
+
+---
+
+### 🔍 Step 2: Retrieval
+
+When a user asks a question:
+1. The system converts the query into an embedding.  
+2. It searches the vector database for **similar chunks of information**.  
+3. The most relevant pieces of text are selected as **context** for answering the question.
+
+---
+
+### ✍️ Step 3: Augmentation
+
+The retrieved information is added to the prompt that will be sent to the model.  
+This process is called **Prompt Augmentation** — it enriches the model’s understanding with real, factual context.
+
+---
+
+### 💬 Step 4: Generation
+
+The final prompt, which now includes both the user’s question and the retrieved context, is sent to the **Language Model (LLM)**.  
+The model then generates an **accurate, context-aware, and grounded response**.
+
+---
+
+## 🧭 RAG Workflow Overview
+
+```mermaid
+graph TD
+A[User Query] --> B[Retrieve Relevant Documents]
+B --> C[Augment Prompt with Context]
+C --> D[Generate Answer using LLM]
+D --> E[Final Response to User]
+```
