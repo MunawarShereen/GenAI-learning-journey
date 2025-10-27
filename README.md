@@ -676,3 +676,41 @@ By choosing the right parser — whether **string**, **JSON**, **structured**, o
 you can ensure your GenAI pipelines are **consistent, validated, and ready for real-world applications**.
 
 Every Output Parser in LangChain is **reusable, composable, and essential** for building scalable, production-grade AI systems.
+
+
+# 🧠 Retrieval-Augmented Generation (RAG)
+
+## 📘 What is RAG?
+
+**RAG (Retrieval-Augmented Generation)** is a method that combines **information retrieval** with **language generation**.
+
+In simple terms:  
+> When you ask a question, the model first **retrieves relevant documents** from a **knowledge base** and then uses those documents as **context** to generate an **accurate and grounded response**.
+
+---
+
+## 💡 Why Use RAG?
+
+Traditional **Large Language Models (LLMs)** like GPT or BERT have limitations:
+
+- They can’t access **recent or private data** after training.  
+- They sometimes **hallucinate** (generate incorrect information).
+
+### ✅ Benefits of RAG
+
+- **Up-to-date Information** → Retrieves the latest data dynamically.  
+- **Better Privacy** → Keeps private data local instead of sending it to external servers.  
+- **No Document Size Limit** → Can handle large documents efficiently.  
+
+---
+
+## ⚙️ Core Components of RAG
+
+RAG systems typically include the following main components:
+
+1. **Document Loaders**  
+2. **Text Splitters**  
+3. **Vector Databases**  
+4. **Retrievers**
+
+---
